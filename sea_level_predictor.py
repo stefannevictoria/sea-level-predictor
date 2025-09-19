@@ -14,7 +14,7 @@ def draw_plot():
 
     # Create first line of best fit
     A = linregress(x,y) # linregress calculates the slope and intercept for a "best fit" line (linear regression)
-    xA = np.arange(x.min(), 2051) # Create an array of the years starting from the earliest until 2050 -> values of x that the line will be draw
+    xA = np.arange(x.min(), 2051) # Create an array of the years starting from the earliest until 2050 -> values of x that the line will be draw. We need crate this array since this values don't exist in Year column
     yA = A.intercept + A.slope * xA # Equation of the line y = m*x + b, where m = slope and b = intercept -> calculate the predicted sea level for each year
     plt.plot(xA, yA, color="red") # Plot the line
 
